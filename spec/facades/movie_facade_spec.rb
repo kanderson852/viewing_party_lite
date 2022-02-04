@@ -52,8 +52,31 @@ RSpec.describe MovieFacade, type: :facade do
 
     end
 
-    # describe '::movie_list' do
+    describe '::search_movie_list', :vcr do
+      it 'should return an array of queried movie objects' do
+        movie_list = MovieFacade.search_movie_list('star')
 
-    # end
+        expect(movie_list).to be_a(Array)
+        expect(movie_list.first).to be_a(Movie)
+      end
+
+      it 'should return 40 movies if able' do
+        movie_list = MovieFacade.search_movie_list('star')
+
+        expect(movie_list.count).to eq(40)
+      end
+
+      it 'should return less than 40 movies if there are less' do
+        movie_list = MovieFacade.search_movie_list('spaceballs')
+
+        expect(movie_list.count).to eq(2)
+      end
+
+      it 'should return no movies if there are no matching' do
+        movie_list = MovieFacade.search_movie_list('asldgahskgadshjlg')
+
+        expect(movie_list.count).to eq(0)
+      end
+    end
   end
 end

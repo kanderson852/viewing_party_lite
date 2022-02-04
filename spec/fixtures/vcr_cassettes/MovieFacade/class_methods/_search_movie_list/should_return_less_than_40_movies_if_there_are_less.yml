@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=api_key&page=1&query=spaceballs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 04 Feb 2022 00:44:46 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=600
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 23241b9c368643949e3bb1a1ba4e97c2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 0H2UFCX2nwOq5QeKVz-zUPYBOAGbMgzy2LLpGRLk4ypGdmVD7xpDYg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/vq9QrPICVfjz53Pt3t2iLaBBhY6.jpg","genre_ids":[35,878],"id":957,"original_language":"en","original_title":"Spaceballs","overview":"When
+        the nefarious Dark Helmet hatches a plan to snatch Princess Vespa and steal
+        her planet''s air, space-bum-for-hire Lone Starr and his clueless sidekick
+        fly to the rescue. Along the way, they meet Yogurt, who puts Lone Starr wise
+        to the power of \"The Schwartz.\" Can he master it in time to save the day?","popularity":22.561,"poster_path":"/o624HTt93iIJIc1Sg5hNkDTnk5l.jpg","release_date":"1987-06-24","title":"Spaceballs","video":false,"vote_average":6.8,"vote_count":2288},{"adult":false,"backdrop_path":null,"genre_ids":[35,99],"id":686508,"original_language":"en","original_title":"Spaceballs:
+        In Conversation - Mel Brooks and Thomas Meehan","overview":"Features a sit-down
+        with two of the film''s writers; the third, Ronny Graham, passed away in 1999.","popularity":0.633,"poster_path":"/tI8MZ3wo9EHhn3Vu0pEKVwhNGIM.jpg","release_date":"2005-05-03","title":"Spaceballs:
+        In Conversation - Mel Brooks and Thomas Meehan","video":false,"vote_average":2,"vote_count":1}],"total_pages":1,"total_results":2}'
+  recorded_at: Fri, 04 Feb 2022 00:44:46 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=api_key&page=2&query=spaceballs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 04 Feb 2022 00:44:46 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=600
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 235fa9476ee502b13c0801d1fa3b57a2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - bsCtSwpawZdYpybuBRREmfrJi-L0Nm0zegpuxmEMI60cGbNAHyWuRw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":2,"results":[],"total_pages":1,"total_results":2}'
+  recorded_at: Fri, 04 Feb 2022 00:44:46 GMT
+recorded_with: VCR 6.0.0

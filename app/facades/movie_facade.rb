@@ -13,7 +13,7 @@ class MovieFacade
     end
   end
 
-  def self.create_movie(movie_id)
+  def self.create_movie(movie_id, cast = nil, reviews = nil)
     reviews = MovieFacade.movie_reviews(movie_id)
     cast = MovieFacade.movie_casts(movie_id)
     movie_data = MovieService.get_movie(movie_id)
@@ -25,7 +25,15 @@ class MovieFacade
     movie_list_data = MovieService.top_rated_movies
 
     movie_list_data[:results].map do |movie|
-      MovieFacade.create_movie(movie[:id])
+      Movie.new(movie)
+    end
+  end
+
+  def self.search_movie_list(string)
+    movie_list_data = MovieService.search_movies(string)
+
+    movie_list_data.map do |movie|
+      Movie.new(movie)
     end
   end
 end

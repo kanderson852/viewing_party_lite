@@ -8,7 +8,7 @@ class Movie
               :cast,
               :reviews
 
-  def initialize(data, cast, reviews)
+  def initialize(data, cast = nil, reviews = nil)
     @title = data[:title]
     @movie_id = data[:id]
     @genres = create_genres(data)
@@ -20,6 +20,6 @@ class Movie
   end
 
   def create_genres(data)
-    data[:genres].pluck(:name).join(', ')
+    data[:genres].pluck(:name).join(', ') unless data[:genres].nil?
   end
 end

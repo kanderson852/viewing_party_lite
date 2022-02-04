@@ -25,5 +25,32 @@ RSpec.describe MovieService, type: :service do
         expect(top_rated).to be_a(Hash)
       end
     end
+
+    describe '::search_movies' do
+      it 'returns array of movies searched by query' do
+        search = MovieService.search_movies('star')
+
+        expect(search.first[:title].downcase).to include('star')
+        expect(search).to be_a(Array)
+      end
+
+      it 'returns array of max 40 movies if more than 40 matches' do
+        search = MovieService.search_movies('star')
+
+        expect(search.count).to eq(40)
+      end
+
+      it 'returns array of less than 40 movies if less are found' do
+        search = MovieService.search_movies('spaceballs')
+
+        expect(search.count).to eq(2)
+      end
+
+      it 'returns a blank array if no movies found' do
+        search = MovieService.search_movies('asdfasdfasgagh')
+
+        expect(search.empty?).to eq(true)
+      end
+    end
   end
 end

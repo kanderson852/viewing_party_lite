@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 03 Feb 2022 21:44:34 GMT
+      - Thu, 03 Feb 2022 19:50:28 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,21 +42,23 @@ http_interactions:
       X-Memc-Key:
       - 7688a8b40b3d4871388fc7b0d863ea192783cd4e
       X-Memc-Age:
-      - '14692'
+      - '7846'
       X-Memc-Expires:
-      - '2152'
+      - '8998'
       Etag:
       - W/"dc97d74897afd0f44e6edf623e235514"
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Miss from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 c601f966b37ebf3a1ddf28f033b35904.cloudfront.net (CloudFront)
+      - 1.1 d29afc70fc2fdadee440493854714224.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SFO53-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - O_QvDLQ8hrWc_6hUFn0C7_g28B60Am-zeRZ2KZVAWDV-ahQKkecVsQ==
+      - q84N-jJQXc6EUUCCJJLxR7K-6GjaP0M7nt417tQlqtDnBgj9KqxNgA==
+      Age:
+      - '7734'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -70,5 +72,5 @@ http_interactions:
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
         long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":16639}'
-  recorded_at: Thu, 03 Feb 2022 21:44:34 GMT
+  recorded_at: Thu, 03 Feb 2022 21:59:23 GMT
 recorded_with: VCR 6.0.0
