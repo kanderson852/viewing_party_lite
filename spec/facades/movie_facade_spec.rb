@@ -33,6 +33,12 @@ RSpec.describe MovieFacade, type: :facade do
         expect(star_wars.reviews.first).to be_a(Review)
         expect(star_wars.cast.first).to be_a(Cast)
       end
+      it 'can get all reviews for the movie' do
+        avengers = MovieFacade.create_movie(299536)
+        require "pry"; binding.pry
+        expect(avengers).to be_a(Movie)
+        expect(avengers.reviews.count).to eq(30)
+      end
     end
 
     describe '::top_20_movie_list', :vcr do
@@ -43,6 +49,7 @@ RSpec.describe MovieFacade, type: :facade do
         expect(movie_list.first).to be_a(Movie)
         expect(movie_list.count).to eq(20)
       end
+
     end
 
     # describe '::movie_list' do

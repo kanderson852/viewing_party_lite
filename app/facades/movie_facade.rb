@@ -1,9 +1,8 @@
 class MovieFacade
   def self.movie_reviews(movie_id)
     json = ReviewService.get_reviews(movie_id)
-
-    json[:results].map do |review_data|
-      Review.new(review_data)
+    json.map do |review_data|
+       Review.new(review_data)
     end
   end
 

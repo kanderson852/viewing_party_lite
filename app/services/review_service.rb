@@ -1,7 +1,15 @@
 class ReviewService
   def self.get_reviews(movie_id)
-    response = conn.get("movie/#{movie_id}/reviews")
-    JSON.parse(response.body, symbolize_names: true)
+    initial_response = conn.get("movie/#{movie_id}/reviews")
+    total_count = JSON.parse(initial_response.body, symbolize_names: true)[:total_pages]
+    count = 1
+    json = []
+    until count > total_count do
+      response = conn.get("movie/#{movie_id}/reviews", { page: count })
+      json.push(JSON.parse(response.body, symbolize_names: true)[:results])
+      count += 1
+    end
+    json.flatten
   end
 
   def self.conn
